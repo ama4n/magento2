@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <head>
+       
+       <css src="Register_User::css/grid.css" />
+
+      
+</head>
+
+    <body>
+        <referenceBlock name="product.info.addtocart">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Register_User::addtocart.phtml</argument>
+            </action>
+        </referenceBlock>
+
+        <referenceContainer name="content">
+        <block class="Magento\Catalog\Block\Product\View" name="produc5t.info.review" template="Register_User::success.phtml">
+        </block>
+    </referenceContainer>
+       
+    </body>
+
+</page>

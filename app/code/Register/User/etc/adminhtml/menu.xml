@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Register_User::user" title="Register User" module="Register_User" sortOrder="10" resource="Register_User::user"/>
+
+        <add id="Register_User::add_row" title="Register User" module="Register_User" sortOrder="20" parent="Register_User::user" action="user/user/index" resource="Register_User::add_row"/>
+   
+
+    </menu>
+</config>

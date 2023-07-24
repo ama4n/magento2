@@ -1,0 +1,51 @@
+
+ <?php
+  $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+  $FormKey = $objectManager->get('Magento\Framework\Data\Form\FormKey');
+?> 
+
+<form class="contact custom" 
+          action="http://local.magento2.4.5.com/admin/user/user/downlaod/"
+         id="custom-form"
+         method="post">
+
+         <input name="form_key" type="hidden" value="<?php echo $FormKey->getFormKey();?>">
+       <div class="primary">
+           
+           <button type="submit" title="<?php  echo __('Thankyou') ?>" class="btn-btn-primary" id="custom_pdf">
+               <span><?php  echo __('Thankyou') ?></span>
+           </button>
+       </div>
+    </div>
+</form>
+<!-- <script>
+ require(["jquery", "jquery/ui","mage/url"],function($,urlBuilder) {     
+  $(document).ready(function() {
+
+    $("#custom_pdf").click(function() {
+    var form = $('#custom-form')[0];
+    var data = new FormData(form);
+   
+    var url = "<?php echo $block->getBaseUrl().'admin/user/user/downlaod/' ?>"; 
+   
+       $.ajax({
+       
+           type: "post",
+           url:url,
+          data: data,
+           processData: false,
+           contentType: false,
+           cache: false,
+           async: false,
+           showLoader: true,
+          
+           success: function (data) {
+               console.log(data);
+           },
+          
+       });
+   
+ });
+});
+ });
+</script> -->

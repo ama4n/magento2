@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+<system>
+        <tab id="aman" translate="label" sortOrder="10">
+            <label>Product</label>
+        </tab>
+        <section id="helloworl" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Product number</label>
+            <tab>aman</tab>
+            <resource>Register_User::helloworld_config</resource>
+            <group id="genera" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                
+                <field id="display_tex" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                  
+                    <label>Text</label>
+                    
+                </field>
+            </group>
+        </section>
+    </system>
+   
+</config>
+
+
+
+
+
+       

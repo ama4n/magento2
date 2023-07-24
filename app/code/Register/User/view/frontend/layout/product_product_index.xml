@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>   
+       <css src="Register_User::css/grid.css" />
+       <link src="Register_User::js/my_js.js"/>      
+</head>
+    <referenceContainer name="content">
+        <block class="Register\User\Block\Index" name="user_index_index" template="Register_User::index.phtml" 
+         cacheable="false"/>
+    </referenceContainer>
+</page>

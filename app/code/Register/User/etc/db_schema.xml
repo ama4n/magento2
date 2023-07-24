@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="customer_entity" resource="default" engine="innodb">
+        <column xsi:type="varchar" name="phone" nullable="true" length="40" comment="Phone"/>
+    </table>
+
+   <table name="sales_order" resource="sales" engine="innodb" comment="Sales Order">
+        <column xsi:type="varchar" name="custom_column" nullable="true" length="32" comment="Custom Column"/>
+    </table>
+
+    <table name="sales_order_grid">
+       <column xsi:type="varchar" name="custom_column" nullable="true" comment="Custom Column" />
+   </table>
+
+   
+</schema>
