@@ -1,0 +1,14 @@
+{
+    "md_helloworld": {
+        "column": {
+            "id": true,
+            "author_name": true,
+            "email": true,
+            "description": true,
+            "description1": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

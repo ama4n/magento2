@@ -1,0 +1,13 @@
+{
+    "admin_grid": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "address": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

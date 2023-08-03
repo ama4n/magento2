@@ -1,0 +1,11 @@
+{
+  "name": "vendor/lg"
+  ,"type": "magento2-language"
+  ,"description": "Hindi language"
+  ,"authors": [{
+      "name": "Bilal Usean",
+      "email": "bla@bla.com",
+      "role": "Developer"
+  }]  
+  ,"extra": {"map": [["*", "vendor/lg_lg"]]}
+}

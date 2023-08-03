@@ -1,0 +1,27 @@
+{
+    "crud": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true,
+            "city": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "crud1": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true,
+            "city": true,
+            "image": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

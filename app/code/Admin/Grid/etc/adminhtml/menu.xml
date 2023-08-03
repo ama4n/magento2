@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Admin_Grid::manager" title="Grid Manager" module="Admin_Grid" sortOrder="10" resource="Admin_Grid::manager"/>
+        <add id="Admin_Grid::add_row" title="Grid Manager" module="Admin_Grid" sortOrder="20" parent="Admin_Grid::manager" action="grid/grid" resource="Admin_Grid::add_row"/>
+
+
+
+
+         <!-- <add id="Admin_Grid::admin" title="Traning Grid " module="Admin_Grid" sortOrder="20" parent="Admin_Grid::manager" action="grid/post" resource="Admin_Grid::admin"/> -->
+
+           <add id="Admin_Grid::post" title="Manage Posts" module="Admin_Grid" sortOrder="10" action="grid/post" resource="Custom_Blog::post" parent="Admin_Grid::manager"  />
+   
+
+    </menu>
+</config>

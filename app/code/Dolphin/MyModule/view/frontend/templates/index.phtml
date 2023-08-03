@@ -1,0 +1,77 @@
+<?php
+
+$custom_data = $block->getCustomData();
+?>
+
+
+
+<?php
+    if (count($custom_data)) {
+        ?>
+<table>
+    <tr>
+        <th><?= __('Id'); ?></th>
+        <th><?= __('Name'); ?></th>
+        <th><?= __('Email'); ?></th>
+        <th><?= __('Contact No'); ?></th>
+        <th><?= __('City'); ?></th>
+        <th><?= __('Profile'); ?></th>
+        <th colspan="2"><?= __('Action'); ?></th>
+    </tr>
+    <?php
+        foreach ($custom_data as $collection){ 
+         
+           
+           
+            if ($collection->getImage()) {  
+              $image_temp[0]['name'] = $collection->getPath();
+              
+                $image_temp[0]['url'] = $this->getMediaUrl().$collection->getImage();
+              
+                $data['image_path'] = $image_temp;
+               
+            }
+            
+            ?>
+    
+    <tr>
+        <td><?= $collection->getId(); ?></td>
+        <td><?= $collection->getName(); ?></td>
+        <td><?= $collection->getEmail(); ?></td>
+        <td><?= $collection->getPhone(); ?></td>
+        <td><?= $collection->getCity(); ?></td>
+        <td> <img src="<?php echo $this->getMediaUrl().$collection->getImage(); ?>" /></td>
+        
+        <td>
+            <a href="<?= $block->getUrl('mymodule/index/edit').'id/'.$collection->getId(); ?>" class="action primary">Edit</a>
+        </td>
+        <td>
+            <a href="<?= $block->getUrl('mymodule/index/delete').'?id='.$collection->getId();?>" class="action primary">Delete</a>
+        </td>
+        <td>
+            <a href="<?= $block->getUrl('mymodule/index/insert');?>" class="action primary">Create</a>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+
+
+<?php if ($block->getPagerHtml()): ?>
+                <div class="order-products-toolbar toolbar bottom">
+                    <?= $block->getPagerHtml() ?>
+                </div>
+        <?php endif ?>
+    <?php } else { ?>
+                <div class="message info empty">
+                    <span><?= $block->escapeHtml('You have no data in table.') ?></span>
+                </div>
+    <?php  } ?>
+
+   
+   
+
+
+
+   
+
+

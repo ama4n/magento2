@@ -1,0 +1,79 @@
+
+<?php
+$data = $block->getEditData();
+// print_r($data);
+// echo $data['name'];
+// echo $data['email'];
+
+
+   
+?>
+
+
+
+
+<div id="custom-form">
+   <form class="contact custom" 
+         action="<?php echo $this->getUrl('mymodule/index/update', ['_secure' => true]);?>"
+         id="custom-form"
+         method="post"
+         data-hasrequired="<?php  echo __('* Required Fields') ?>"
+         data-mage-init='{"validation":{}}'>
+ 
+        <fieldset class="fieldset">
+            <legend class="legend"><span><?php  echo __("Update") ?></span></legend><br />
+            <div class="field name required">
+                <label class="label" for="name"><span><?php  echo __('Name') ?></span></label>
+                <div class="control">
+                    <input name="name" id="name" title="" value="<?php if(isset($data['name'])){
+                        echo $data['name'];
+                    }
+                    ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="control">
+                    <input name="id" id="name"type="hidden" title="" value="<?php if(isset($data['id'])){
+                        echo $data['id'];
+                    }
+                    ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            <div class="field email required">
+                <label class="label" for="email"><span><?php  echo __('Email') ?></span></label>
+                <div class="control">
+                    <input name="email" id="email" title="" value="<?php if(isset($data['email'])){
+                        echo $data['email'];
+                    }
+                    ?>"class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="field phone">
+                <label class="label" for="phone"><span><?php  echo __('Contact No') ?></span></label>
+                <div class="control">
+                    <input name="phone" id="phone" title="" value="<?php if(isset($data['phone'])){
+                        echo $data['phone'];
+                    }
+                    ?>"class="input-text" type="text"/>
+                </div>
+            </div>
+            <div class="field city">
+                <label class="label" for="city"><span><?php  echo __('City') ?></span></label>
+                <div class="control">
+                    <input name="city" id="city" title="" value="<?php if(isset($data['city'])){
+                        echo $data['city'];
+                    }
+                    ?>" class="input-text" type="text"/>
+                </div>
+            </div>
+        </fieldset>
+    
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="hideit" id="hideit" value="" />
+                <button type="submit" title="<?php  echo __('Submit') ?>" class="action submit primary" id="custom_btn">
+                    <span><?php  echo __('Update') ?></span>
+                </button>
+            </div>
+        </div>
+   </form>
+</div>
+ 

@@ -1,0 +1,57 @@
+<div id="custom-form">
+   <form enctype="multipart/form-data"  class="contact custom" 
+         action="<?php echo $this->getUrl('mymodule/index/save', ['_secure' => true]);?>"
+         id="custom-form"
+         method="post"
+         data-hasrequired="<?php  echo __('* Required Fields') ?>"
+         data-mage-init='{"validation":{}}'>
+ 
+        <fieldset class="fieldset">
+            <legend class="legend"><span><?php  echo __('Register') ?></span></legend><br />
+            <div class="field name required">
+                <label class="label" for="name"><span><?php  echo __('Name') ?></span></label>
+                <div class="control">
+                    <input name="name" id="name" title="" class="input-text" type="text" data-validate='{"required":true,"minlength":3, "validate-alpha":true}'/>
+                </div>
+            </div>
+            <div class="field email required">
+                <label class="label" for="email"><span><?php  echo __('Email') ?></span></label>
+                <div class="control">
+                    <input name="email" id="email" title="" class="input-text" type="text" data-validate='{"required":true,"validate-email":true}'/>
+                </div>
+            </div>
+            <div class="field phone required">
+                <label class="label" for="phone"><span><?php  echo __('Contact No') ?></span></label>
+                <div class="control">
+                    <input name="phone" id="phone" title="" class="input-text" type="text"
+                    data-validate='{"required":true,"validate-number":true,"minlength":10,"maxlength":10}'/>
+                </div>
+            </div>
+            <div class="field city required">
+                <label class="label" for="city"><span><?php  echo __('City') ?></span></label>
+                <div class="control">
+                    <input name="city" id="city" title="" class="input-text" type="text"
+                    data-validate="{required:true}"/>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="field Image ">
+                <label class="label" for="image"><span><?php  echo __('Upload Image') ?></span></label>
+                <div class="control">
+                    <input name="image" id="image" title="" class="input-text" type="file" 
+                    />
+                </div>
+            </div>
+        </fieldset>
+    
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="hideit" id="hideit" value="" />
+                <button type="submit" title="<?php  echo __('Submit') ?>" class="action submit primary" id="custom_btn">
+                    <span><?php  echo __('Submit') ?></span>
+                </button>
+            </div>
+        </div>
+   </form>
+</div>

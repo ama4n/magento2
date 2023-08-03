@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   <table name="admin_grid" resource="default" engine="innodb" comment="Admin_Grid">
+      <column xsi:type="smallint" name="id" padding="7" unsigned="false" nullable="false" identity="true" comment="ID" />
+      <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Name" />
+      <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Email" />
+      <column xsi:type="varchar" name="address" nullable="false" length="255" comment="Address" />
+      
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="id" />
+      </constraint>
+   </table>
+
+
+   <table name="traning_grid" resource="default" engine="innodb" comment="Traning_Grid">
+      <column xsi:type="smallint" name="id" padding="7" unsigned="false" nullable="false" identity="true" comment="ID" />
+      <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Name" />
+      <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Email" />
+      <column xsi:type="varchar" name="address" nullable="false" length="255" comment="Address" />
+      
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="id" />
+      </constraint>
+   </table>
+</schema>
